@@ -12,11 +12,13 @@
     <header>
       <nav>
         <ul aria-label="Main navigation">
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" aria-label="View portfolio works">Works</a></li>
+          <li><a href="#" aria-label="Read the blog">Blog</a></li>
+          <li><a href="#" aria-label="Get in touch with John">Contact</a></li>
         </ul>
       </nav>
+    </header>
+    <main>
       <section>
         <h1>It's a creative technology blog</h1>
         <h2>Hi, I'm John, Creative Technologist</h2>
@@ -29,15 +31,13 @@
           src="../avatar"
           width="243px"
           height="243px"
-          alt="This is Jones's avatar. He is a young, smiling man who wears a cap and stands against the backdrop of mountains."
+          alt="This is John's avatar. He is a young, smiling man who wears a cap and stands against the backdrop of mountains."
           aria-describedby="He is author of this blog."
         />
         <button type="button" aria-label="Download John’s resume">
           Download Resume
         </button>
       </section>
-    </header>
-    <main>
       <section>
         <h3>Recent posts</h3>
         <a href="#" aria-label="View all recent posts">View all</a>
@@ -69,7 +69,7 @@
         </ul>
       </section>
       <section>
-        <h2>Featured works</h2>
+        <h3>Featured works</h3>
         <ul>
           <li>
             <article>
@@ -80,7 +80,7 @@
                 width="246px"
                 height="180px"
               />
-              <h3>Designing Dashboards</h3>
+              <h4>Designing Dashboards</h4>
               <time>2020</time>
               <span>Dashboard</span>
               <p>
@@ -99,7 +99,7 @@
                 width="246px"
                 height="180px"
               />
-              <h3>Vibrant Portraits of 2020</h3>
+              <h4>Vibrant Portraits of 2020</h4>
               <time>2018</time>
               <span>Illustration</span>
               <p>
@@ -118,7 +118,7 @@
                 width="246px"
                 height="180px"
               />
-              <h3>36 Days of Malayalam type</h3>
+              <h4>36 Days of Malayalam type</h4>
               <time>2018</time>
               <span>Typography</span>
               <p>
@@ -132,10 +132,20 @@
       </section>
     </main>
     <footer>
-      <a href="#"><div aria-label="Facebook"></div></a>
-      <a href="#"><div aria-label="Twitter"></div></a>
-      <a href="#"><div aria-label="Instagram"></div></a>
-      <a href="#"><div aria-label="LinkedIn"></div></a>
+      <ul aria-label="Social media navigation">
+        <li>
+          <a href="#"><div aria-label="Go to Facebook"></div></a>
+        </li>
+        <li>
+          <a href="#"><div aria-label="Go to Twitter"></div></a>
+        </li>
+        <li>
+          <a href="#"><div aria-label="Go to Instagram"></div></a>
+        </li>
+        <li>
+          <a href="#"><div aria-label="Go to LinkedIn"></div></a>
+        </li>
+      </ul>
       <p>Copyright &copy; 2020 All rights reserved</p>
     </footer>
     <script src="" async></script>
