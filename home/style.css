@@ -1,5 +1,5 @@
 /* reset.css взяла из блога https://www.joshwcomeau.com/css/custom-css-reset/ но там не сбрасываются стили h, i и тут нужны твои комментарии */
-
+/* как центрировать элемент у которого ширина блока родителя, не применяя align-items: center и text-align: center только с помощью гридов  */
 *,
 *::before,
 *::after {
