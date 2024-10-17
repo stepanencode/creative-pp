@@ -1,3 +1,5 @@
+/* reset.css взяла из блога https://www.joshwcomeau.com/css/custom-css-reset/ но там не сбрасываются стили h, i и тут нужны твои комментарии */
+
 *,
 *::before,
 *::after {
@@ -71,14 +73,15 @@ ul {
   --font-size-view: 1.125rem;
   --font-size-base: 1rem;
 
-  --padding-small: 10px;
-  --padding-medium: 15px;
-  --padding-large: 20px;
-  --padding-x-large: 50px;
+  --padding-small: 0.625rem;
+  --padding-medium: 0.938rem;
+  --padding-large: 1.25rem;
+  --padding-social-media: 2rem;
+  --padding-x-large: 3.125rem;
 
-  --margin-x-small: 10px;
-  --margin-small: 20px;
-  --margin-medium: 30px;
+  --margin-x-small: 0.625rem;
+  --margin-small: 1.25rem;
+  --margin-medium: 1.875rem;
 }
 
 body {
@@ -92,12 +95,6 @@ body {
 img {
   max-width: 100%;
   display: block;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--padding-large);
 }
 
 .main-navigation {
@@ -164,8 +161,6 @@ img {
 }
 
 .avatar-container img {
-  display: block;
-  width: 100%;
   height: auto;
   justify-self: center;
 }
@@ -186,6 +181,7 @@ img {
 }
 
 .recent-posts {
+  align-items: center;
   background-color: var(--background-color-light-blue);
   display: flex;
   flex-direction: column;
@@ -194,7 +190,8 @@ img {
   padding: var(--padding-small);
 }
 
-.recent-posts h3 {
+.recent-posts h3,
+.featured-works h3 {
   font-size: var(--font-size-view);
   font-weight: 400;
   padding: var(--padding-medium);
@@ -231,6 +228,60 @@ img {
 
 .view-posts {
   display: none;
+}
+
+.featured-works {
+  align-items: center;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+
+.featured-works article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  padding: var(--padding-small);
+}
+
+.featured-works img {
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.featured-works h4 {
+  font-size: var(--font-size-main-header);
+  margin-bottom: 1rem;
+}
+
+.featured-works time {
+  background-color: var(--year-tag-color);
+  color: var(--background-color);
+  padding: 5px 15px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  margin-right: var(--margin-small);
+}
+
+.social-network-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--padding-social-media);
+}
+
+footer {
+  padding: var(--padding-x-large) 0;
+}
+
+footer p {
+  text-align: center;
+  margin-top: var(--margin-medium);
 }
 
 @media (min-width: 768px) {
