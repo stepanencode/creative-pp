@@ -47,6 +47,8 @@ a {
 ol,
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #root,
@@ -201,6 +203,30 @@ img {
 .recent-posts article {
   background-color: var(--background-color);
   margin-bottom: var(--margin-x-small);
+  padding: var(--padding-small);
+}
+
+.recent-posts article p {
+  margin-bottom: var(--margin-x-small);
+}
+
+.recent-posts h4 {
+  font-size: var(--font-size-button);
+  font-weight: 700;
+  margin-bottom: var(--margin-x-small);
+}
+
+.tag-container {
+  margin-bottom: var(--margin-small);
+}
+
+.tag-container time {
+  border-right: 1px solid var(--text-color);
+  padding-right: var(--padding-large);
+}
+
+.tag-container span {
+  padding-left: var(--padding-small);
 }
 
 .view-posts {
