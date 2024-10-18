@@ -1,5 +1,7 @@
 /* reset.css взяла из блога https://www.joshwcomeau.com/css/custom-css-reset/ но там не сбрасываются стили h, i и тут нужны твои комментарии */
 /* как центрировать элемент у которого ширина блока родителя, не применяя align-items: center и text-align: center только с помощью гридов  */
+
+/* надо ли по дефолту указывать такие вещи как убрать горизонтальную полосу прокрутки, ведь она никогда не нужна и что-то еще может быть такое обязательное? */
 *,
 *::before,
 *::after {
@@ -65,6 +67,7 @@ ul {
   --year-tag-color: #142850;
   --background-color: #fff;
   --background-color-light-blue: #edf7fa;
+  --color-link: #00a8cc;
   --font-family-base: 'Heebo', sans-serif;
 
   --font-size-header: 2rem;
@@ -104,6 +107,8 @@ img {
   display: block;
 }
 
+/* header */
+
 .main-navigation {
   display: flex;
   flex-direction: row;
@@ -120,6 +125,7 @@ img {
   font-size: 2rem;
 }
 
+/* main */
 /* visually hidden правильный ли код? */
 .header-helper {
   position: absolute;
@@ -290,10 +296,6 @@ footer p {
 }
 
 @media (min-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
   .main-navigation {
     display: flex;
     flex-direction: row;
@@ -347,33 +349,45 @@ footer p {
   }
 
   .recent-posts {
-    padding: 0 var(--padding-desktop-medium);
     align-items: baseline;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* justify-items: flex-start; */
+  }
+
+  /* тут я запуталась с шириной надо восполнить пробел когда какие ширины устанавливать блокам
+ - когда 100%, когда max-width, min-width, width потому что из-за этого могут не срабатывать flex или вырвнивание */
+
+  .recent-posts-container {
+    min-width: 850px;
+    margin: 0 auto;
   }
 
   .recent-post-header-container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
+  .recent-post-header-container h3 {
+    font-size: var(--font-size-button);
+  }
+
   .recent-post-header-container a {
-    display: block;
-    font-size: var(--font-size-view);
+    color: var(--color-link);
     font-weight: 400;
+    font-size: var(--font-size-base);
     padding: var(--padding-medium);
   }
 
   .article-list {
+    max-width: 850px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
   }
 
-  .recent-posts article {
-    margin-right: 20px;
-  }
+  /* не срабатывает justify-content если не указать явно ширину блока article-list */
+  /* следующая секция тоже не получилась из-за ширин то что я писала выше  */
 }
