@@ -18,7 +18,7 @@
         <a href="#" class="menu-icon">
           <span class="fa fa-bars"></span>
         </a>
-        <ul aria-label="Main navigation" class="main-navigation">
+        <ul class="main-navigation">
           <li><a href="#" aria-label="View portfolio works">Works</a></li>
           <li><a href="#" aria-label="Read the blog">Blog</a></li>
           <li><a href="#" aria-label="Get in touch with John">Contact</a></li>
@@ -28,34 +28,38 @@
     <main>
       <section class="profile">
         <h1 class="header-helper">It's a creative technology blog</h1>
-        <h2>Hi, I'm John, Creative Technologist</h2>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </p>
         <div class="avatar-container">
           <img
             src="./assets/man.png"
-            width="170px"
-            height="170px"
+            width="243px"
+            height="243px"
             alt="This is John's avatar. He is a young, smiling man who wears a cap and stands against the backdrop of mountains."
           />
         </div>
-        <button
-          class="cv-download"
-          type="button"
-          aria-label="Download John’s resume"
-        >
-          Download Resume
-        </button>
+        <div class="caption-container">
+          <h2>Hi, I'm John, Creative Technologist</h2>
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet.
+          </p>
+          <button
+            class="cv-download"
+            type="button"
+            aria-label="Download John’s resume"
+          >
+            Download Resume
+          </button>
+        </div>
       </section>
       <section class="recent-posts">
-        <h3>Recent posts</h3>
-        <a class="view-posts" href="#" aria-label="View all recent posts"
-          >View all</a
-        >
-        <ul>
+        <div class="recent-post-header-container">
+          <h3>Recent posts</h3>
+          <a class="view-posts" href="#" aria-label="View all recent posts"
+            >View all</a
+          >
+        </div>
+        <ul class="article-list">
           <li>
             <article>
               <h4>Making a design system from scratch</h4>

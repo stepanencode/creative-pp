@@ -73,15 +73,22 @@ ul {
   --font-size-view: 1.125rem;
   --font-size-base: 1rem;
 
+  --font-size-desktop-header: 2.75rem;
+
   --padding-small: 0.625rem;
   --padding-medium: 0.938rem;
   --padding-large: 1.25rem;
   --padding-social-media: 2rem;
   --padding-x-large: 3.125rem;
+  --padding-desktop-x-large: 9.375rem;
+  --padding-desktop-large: 4.375rem;
+  --padding-desktop-medium: 7.5rem;
 
   --margin-x-small: 0.625rem;
   --margin-small: 1.25rem;
   --margin-medium: 1.875rem;
+
+  --margin-desktop-medium: 2.5rem;
 }
 
 body {
@@ -113,6 +120,7 @@ img {
   font-size: 2rem;
 }
 
+/* visually hidden правильный ли код? */
 .header-helper {
   position: absolute;
   width: 1px;
@@ -137,16 +145,13 @@ img {
 
 .profile h2 {
   margin-top: var(--margin-medium);
-  order: 1;
 }
 .profile p {
   margin-top: var(--margin-small);
-  order: 2;
 }
 
 .profile button {
   margin-top: var(--margin-medium);
-  order: 3;
 }
 .avatar-container {
   width: 170px;
@@ -157,7 +162,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  order: 0;
 }
 
 .avatar-container img {
@@ -201,6 +205,7 @@ img {
   background-color: var(--background-color);
   margin-bottom: var(--margin-x-small);
   padding: var(--padding-small);
+  max-width: 420px;
 }
 
 .recent-posts article p {
@@ -294,6 +299,9 @@ footer p {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    gap: var(--padding-social-media);
+    padding-right: var(--padding-x-large);
+    padding-top: var(--padding-large);
   }
 
   .menu-icon {
@@ -302,5 +310,70 @@ footer p {
 
   .view-posts {
     display: inline-block;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: row;
+    padding: 0 var(--padding-desktop-x-large);
+    gap: 115px;
+    padding-bottom: var(--padding-desktop-large);
+  }
+
+  .avatar-container {
+    width: 243px;
+    height: 243px;
+    min-width: 243px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--background-color-light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+  }
+
+  .caption-container {
+    order: 0;
+  }
+
+  .caption-container h2 {
+    font-size: var(--font-size-desktop-header);
+    margin-bottom: var(--margin-desktop-medium);
+  }
+
+  .caption-container p {
+    margin-bottom: var(--margin-desktop-medium);
+  }
+
+  .recent-posts {
+    padding: 0 var(--padding-desktop-medium);
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* justify-items: flex-start; */
+  }
+
+  .recent-post-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .recent-post-header-container a {
+    display: block;
+    font-size: var(--font-size-view);
+    font-weight: 400;
+    padding: var(--padding-medium);
+  }
+
+  .article-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .recent-posts article {
+    margin-right: 20px;
   }
 }
